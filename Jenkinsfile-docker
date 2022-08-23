@@ -25,7 +25,7 @@ pipeline {
                 DOCKER_HUB_LOGIN = credentials('adityadockerhub')
             }
             steps {
-                bat 'docker login --username=$DOCKER_HUB_LOGIN_USR --password-stdin=dckr_pat_9HA95Nx3U4jUMojkyzXf2hwnTPA'
+                bat 'docker login --username=$DOCKER_HUB_LOGIN_USR --password=dckr_pat_9HA95Nx3U4jUMojkyzXf2hwnTPA'
                 bat './gradlew dockerPush'
             }
         }
